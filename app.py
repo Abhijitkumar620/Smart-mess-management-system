@@ -22,11 +22,11 @@ from models.leave import LeaveRequest
 from models.billing import Billing
 from routes.auth import auth_bp
 from routes.member import member_bp
-from routes.admin import admin_bp
+
 
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(member_bp, url_prefix='/api/member')
-app.register_blueprint(admin_bp, url_prefix='/api/admin')
+
 
 @app.errorhandler(404)
 def not_found(error):
